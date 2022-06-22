@@ -1,0 +1,77 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/company/getall",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 18451
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/market/company/getall",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/company/info?code={code}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 18451
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/market/company/info/{code}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/company/delete?code={code}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 18451
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/market/company/delete/{code}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/company/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 18451
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/market/company/register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/stock/get?code={code}&startdate={startdate}&enddate={enddate}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36653
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/market/stock/get/{code}/{startdate}/{enddate}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1.0/market/stock/add",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36653
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/market/stock/add",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+
+  ]
+}
